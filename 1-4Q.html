@@ -1,0 +1,203 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1-4</title>
+  <style>
+    body {
+      background-color: #c0c0c0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 15px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    h1 {
+      color: green;
+      font-weight: bold;
+      margin: 0;
+    }
+    .header img {
+      height: 40px;
+    }
+    .grid-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: -10px;
+    }
+    .labels {
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      margin-right: 8px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    
+
+    .labels div {
+      height: 60px;
+      line-height: 60px;
+    }
+    .grid-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .column-labels {
+      display: grid;
+      grid-template-columns: repeat(8, 60px);
+      gap: 2px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+    .column-labels div {
+      height: 30px;
+      line-height: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(8, 60px);
+      grid-template-rows: repeat(8, 60px);
+      gap: 2px;
+    }
+    .cell {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      position: relative;
+    }
+    .white { background-color: white; }
+    .black { background-color: black; }
+    .cell-number {
+      font-size: 16px;
+      color: red;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      position: absolute;
+    }
+    .cell.show-number .cell-number {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>1-4♕(?)</h1>
+  </div>
+  <div class="grid-wrapper">
+    <div class="labels">
+      <div>8</div><div>7</div><div>6</div><div>5</div>
+      <div>4</div><div>3</div><div>2</div><div>1</div>
+    </div>
+    <div class="grid-container">
+      <div class="column-labels">
+        <div>a</div><div>b</div><div>c</div><div>d</div>
+        <div>e</div><div>f</div><div>g</div><div>h</div>
+      </div>
+      <div class="grid">
+        <!-- 8x8 grid cells（黑白相間） -->
+        <!-- 8 行，每行 8 格 -->
+        <!-- row 1 -->
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <!-- row 2 -->
+        <a href="#" class="cell black"><span class="cell-number">?</span></a>
+        <a href="#" class="cell white"><span class="cell-number">?</span></a>
+        <a href="#" class="cell black"><span class="cell-number">?</span></a>
+        <a href="#" class="cell white"><span class="cell-number">?</span></a>
+        <a href="#" class="cell black"><span class="cell-number">?</span></a>
+        <a href="#" class="cell white"><span class="cell-number">?</span></a>
+        <a href="#" class="cell black"><span class="cell-number">?</span></a>
+        <a href="#" class="cell white"><span class="cell-number">?</span></a>
+        <!-- row 3 -->
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <a href="1-5.html" class="cell white"><span class="cell-number"></span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <!-- row 4 -->
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <!-- row 5 -->
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <!-- row 6 -->
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <!-- row 7 -->
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=DePlUZlIcDB7NI0N" class="cell white"><span class="cell-number"></span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">1</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <!-- row 8 -->
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">0</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+        <a href="#" class="cell black"><span class="cell-number">1</span></a>
+        <a href="#" class="cell white"><span class="cell-number">0</span></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.cell').forEach(cell => {
+      cell.addEventListener('click', function (e) {
+        const link = this.getAttribute('href');
+        if (link === '#') {
+          e.preventDefault();
+          this.classList.add('show-number');
+          setTimeout(() => {
+            this.classList.remove('show-number');
+          }, 1000);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
