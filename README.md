@@ -1,2 +1,123 @@
-# minesweeper-chess
-an easy game
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1-1
+  
+  </title>
+
+  <style>
+    body {
+      background-color: #c0c0c0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    h1 {
+      color: green;
+      font-weight: bold;
+      margin: 0;
+    }
+    .header img {
+      height: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 80px);
+      grid-template-rows: repeat(5, 80px);
+      gap: 5px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .cell {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      position: relative;
+    }
+    .white { background-color: white; }
+    .black { background-color: black; }
+    .cell-number {
+      font-size: 24px;
+      color: red;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      position: absolute;
+    }
+    .cell.show-number .cell-number {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>1-1♖</h1>
+  
+  </div>
+  <div class="grid">
+    <!-- 5x5 Grid with center cell as black, alternating others -->
+    <!-- Row 1 -->
+    <a href="#" class="cell white"><span class="cell-number">0</span></a>
+    <a href="#" class="cell black"><span class="cell-number">0</span></a>
+    <a href="#" class="cell white"><span class="cell-number">0</span></a>
+    <a href="#" class="cell black"><span class="cell-number">0</span></a>
+    <a href="#" class="cell white"><span class="cell-number">1</span></a>
+
+    <!-- Row 2 -->
+    <a href="#" class="cell black"><span class="cell-number">0</span></a>
+    <a href="#" class="cell white"><span class="cell-number">0</span></a>
+    <a href="#" class="cell black"><span class="cell-number">0</span></a>
+    <a href="#" class="cell white"><span class="cell-number">0</span></a>
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=wzuvD0d58Lf9hY3k" class="cell black"><span class="cell-number"></span></a>
+
+    <!-- Row 3 -->
+    <a href="#" class="cell white"><span class="cell-number">0</span></a>
+    <a href="#" class="cell black"><span class="cell-number">0</span></a>
+    <a href="#" class="cell white"><span class="cell-number">0</span></a>
+    <a href="https://youtube.com/shorts/aCgP8BFjrw4?si=ptLqhF9rz_YtdC-F" class="cell black"><span class="cell-number">0</span></a>
+    <a href="#" class="cell white"><span class="cell-number">1</span></a>
+
+    <!-- Row 4 -->
+    <a href="#" class="cell black"><span class="cell-number">0</span></a>
+    <a href="#" class="cell white"><span class="cell-number">0</span></a>
+    <a href="#" class="cell black"><span class="cell-number">0</span></a>
+    <a href="#" class="cell white"><span class="cell-number">0</span></a>
+    <a href="https://worship-online.ntpc.gov.tw/" class="cell black"><span class="cell-number">1</span></a>
+
+    <!-- Row 5 -->
+    <a href="#" class="cell white"><span class="cell-number">1</span></a>
+    <a href="#" class="cell black"><span class="cell-number">1</span></a>
+    <a href="#" class="cell white"><span class="cell-number">1</span></a>
+    <a href="#" class="cell black"><span class="cell-number">1</span></a>
+    <a href="1-2.html" class="cell white"></a>
+  </div>
+
+  <script>
+    document.querySelectorAll('.cell').forEach(cell => {
+      cell.addEventListener('click', function (e) {
+        const link = this.getAttribute('href');
+        if (link === '#') {
+          e.preventDefault(); // 只有假的連結才阻止
+          this.classList.add('show-number');
+          setTimeout(() => {
+            this.classList.remove('show-number');
+          }, 1000);
+        }
+        // 真正的連結會自然跳轉
+      });
+    });
+  </script>
+  
+</body>
+</html>
